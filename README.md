@@ -1,9 +1,15 @@
 # Juego-de-cartas-casino-
+
+# ABOUT Black-Jack
+
+CHECK OUT WIKI FOR MORE INFO. -> https://en.wikipedia.org/wiki/Blackjack
+
+
 A text based Blackjack game between a dealer and a player.
 The player has a split option at the beginning of the hand 
 when both cards have the same value.
 Other options include Hit, Stand, Double down, and Surrender.
-Created by Mohadip Lama Taveras and Juan Alvino
+Created by Mohadip Lama Taveras
 
 
 At the beginning, the player has 100 chips.
