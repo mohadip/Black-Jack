@@ -4,17 +4,7 @@ import random
 
 # accessory class Color to differentiate player's card
 # and dealer's card in different colors
-class Color:
-  PURPLE = '\033[95m'
-  CYAN = '\033[96m'
-  DARKCYAN = '\033[36m'
-  BLUE = '\033[94m'
-  GREEN = '\033[92m'
-  YELLOW = '\033[93m'
-  RED = '\033[91m'
-  BOLD = '\033[1m'
-  UNDERLINE = '\033[4m'
-  END = '\033[0m'
+import Color
 
 # print player's cards in Red
 def redStr(hand):
@@ -32,75 +22,11 @@ VALUES = {'A':1, '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10,
 
 
 # define card class
-class Card:
-  def __init__(self, suit, rank):
-    if (suit in SUITS) and (rank in RANKS):
-      self.suit = suit
-      self.rank = rank
-    else:
-      self.suit = None
-      self.rank = None
-      print "Invalid card: ", suit, rank
-
-  def __str__(self):
-    return self.suit + self.rank
-
-  def get_suit(self):
-    return self.suit
-
-  def get_rank(self):
-    return self.rank
-
-        
+import Card        
 # define hand class
-class Hand:
-  def __init__(self):
-    self.playerHand = []
-
-  def __str__(self):
-    s=''    # return a string representation of a hand
-    for card in self.playerHand:
-      s = s + str(card) + ' '
-    return s
-
-  def add_card(self, card):
-    self.playerHand.append(card)    # add a card object to a hand
-
-  def get_value(self):
-    # count aces as 1, if the hand has an ace, then add 10 to hand value if it doesn't bust
-    # compute the value of the hand, see Blackjack video
-    v=0
-    for card in self.playerHand:
-      rank = card.get_rank()
-      v += VALUES[rank]
-    for card in self.playerHand:
-      rank = card.get_rank()
-      if rank == 'A' and v <= 11:
-        v += 10
-    return v
-
- 
-        
+import Hand        
 # define deck class 
-class Deck:
-  def __init__(self):
-    self.cards = [Card(suit,rank) for suit in SUITS for rank in RANKS]
-    self.shuffle()
-
-  def shuffle(self):
-    # shuffle the deck 
-    random.shuffle(self.cards)    # use random.shuffle()
-
-  def deal_card(self):
-    return self.cards.pop(0)    # deal a card object from the deck
-  
-  def __str__(self):
-    s=''    # return a string representing the deck
-    for card in self.cards:
-      s = s + str(card) + ' '
-    return s
-
-
+import Deck
 #define deal process
 def deal():
   global chips
@@ -250,3 +176,4 @@ if __name__ == '__main__':
             'You cannot play unless you buy more chips\n' +\
             'Gambling destroys familities, STOP'
       break
+deal();
