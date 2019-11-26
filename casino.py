@@ -4,7 +4,7 @@ import random
 
 # accessory class Color to differentiate player's card
 # and dealer's card in different colors
-import Color
+from Color import Color
 
 # print player's cards in Red
 def redStr(hand):
@@ -22,11 +22,11 @@ VALUES = {'A':1, '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10,
 
 
 # define card class
-import Card        
+from Card import Card        
 # define hand class
-import Hand        
+from Hand import Hand       
 # define deck class 
-import Deck
+from Deck import Deck
 #define deal process
 def deal():
   global chips
