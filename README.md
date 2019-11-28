@@ -2,28 +2,13 @@
 
 # ABOUT Black-Jack
 
-CHECK OUT WIKI FOR MORE INFO. -> https://en.wikipedia.org/wiki/Blackjack
+What is Blackjack?
+Blackjack is a gambling game that requires only a deck of cards. The goal of the game is to get as close as possible to a hand worth 21 points as the dealer flips over your cards – but go over and you're out!
 
+In Blackjack, numbered cards (2 through 10) are worth their face value, picture cards (jack, queen, and king) are worth 10, and an ace is worth either 1 or 11 depending on your other cards. To start a hand, players place their bets and are dealt two cards face up. They can choose to "hit" (receive another card) or "stick" (stay with their current hand) as they attempt to get as close as possible to 21. If they chose to hit and go over 21, they "bust" and lose the hand (and the money they bet!).
 
-A text based Blackjack game between a dealer and a player.
-The player has a split option at the beginning of the hand 
-when both cards have the same value.
-Other options include Hit, Stand, Double down, and Surrender.
-Created by Mohadip Lama Taveras
+Players face off against the dealer, who starts with one card face down and one face up. When all players have chosen to stick or have busted, the dealer then flips over their hidden card and either hits or sticks, their goal being to get a higher hand than any of the players.
 
+If the dealer busts, they pay out the value of each player's wager to that player, provided that the player hasn't already busted. They also need to pay out if they don't get a higher hand than a player.
 
-At the beginning, the player has 100 chips.
-They can bet a value between 1 and 100.
-Then, both player and dealer will receive two cards.
-Only dealer's first card can be shown
-
-Player can split, hit, stand, double down, or surrender, depends
-on cards and player's decision
-
-Split is only allowed once at the beginning of the game if the initial two cards are the same value
-Noted that the player cannot play hand 2 if there is not enough chips, since the hand 2 share the same amount of bet with hand 1.
-However, the player can play another new hand with a small amount of bet in that occasion.
-
-Double down strictly requires to match 100% of the original bet.
-
-Player can not play anymore when the chips go to 0
+There are a lot of other rules (of course!) that  [you can read](https://bicyclecards.com/how-to-play/blackjack/) up on if you're interested, 
