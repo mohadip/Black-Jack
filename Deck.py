@@ -1,17 +1,16 @@
+import random
+from Card import Card
+
 class Deck:
-  def __init__(self):
-    self.cards = [Card(suit,rank) for suit in SUITS for rank in RANKS]
-    self.shuffle()
+    def __init__(self):
+        self.cards = [Card(s, v) for s in ["Spades", "Clubs", "Hearts",
+                      "Diamonds"] for v in ["A", "2", "3", "4", "5", "6", 
+                      "7", "8", "9", "10", "J", "Q", "K"]]
 
-  def shuffle(self):
-    # shuffle the deck 
-    random.shuffle(self.cards)    # use random.shuffle()
+    def shuffle(self):
+        if len(self.cards) > 1:
+            random.shuffle(self.cards)
 
-  def deal_card(self):
-    return self.cards.pop(0)    # deal a card object from the deck
-  
-  def __str__(self):
-    s=''    # return a string representing the deck
-    for card in self.cards:
-      s = s + str(card) + ' '
-    return s
+    def deal(self):
+        if len(self.cards) > 1:
+            return self.cards.pop(0)

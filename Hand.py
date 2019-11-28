@@ -1,25 +1,38 @@
+from Card import Card
+
+
 class Hand:
-  def __init__(self):
-    self.playerHand = []
+    def __init__(self, dealer=False):
+        self.dealer = dealer
+        self.cards = []
+        self.value = 0
 
-  def __str__(self):
-    s=''    # return a string representation of a hand
-    for card in self.playerHand:
-      s = s + str(card) + ' '
-    return s
+    def add_card(self, card):
+        self.cards.append(card)
+    def calculate_value(self):
+        self.value = 0
+        has_ace = False
+        for card in self.cards:
+            if card.value.isnumeric():
+                self.value += int(card.value)
+            else:
+                if card.value == "A":
+                    has_ace = True
+                    self.value += 11
+                else:
+                    self.value += 10
 
-  def add_card(self, card):
-    self.playerHand.append(card)    # add a card object to a hand
+        if has_ace and self.value > 21:
+            self.value -= 10
 
-  def get_value(self):
-    # count aces as 1, if the hand has an ace, then add 10 to hand value if it doesn't bust
-    # compute the value of the hand, see Blackjack video
-    v=0
-    for card in self.playerHand:
-      rank = card.get_rank()
-      v += VALUES[rank]
-    for card in self.playerHand:
-      rank = card.get_rank()
-      if rank == 'A' and v <= 11:
-        v += 10
-    return v
+    def get_value(self):
+        self.calculate_value()
+        return self.value
+    def display(self):
+        if self.dealer:
+            print("hidden")
+            print(self.cards[1])
+        else:
+            for card in self.cards:
+                print(card)
+            print("Value:", self.get_value())
