@@ -11,6 +11,4 @@ Players face off against the dealer, who starts with one card face down and one 
 
 If the dealer busts, they pay out the value of each player's wager to that player, provided that the player hasn't already busted. They also need to pay out if they don't get a higher hand than a player.
 
-There are a lot of other rules (of course!) that  [you can read](https://bicyclecards.com/how-to-play/blackjack/) up on if you're interested, but the above is everything you need to know to build this game.
-
-Okay, let's get started with some coding!
+There are a lot of other rules (of course!) that  [you can read](https://bicyclecards.com/how-to-play/blackjack/) up on if you're interested, 
