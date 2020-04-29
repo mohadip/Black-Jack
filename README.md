@@ -1,14 +1,15 @@
-# Juego-de-cartas-casino-
+# Blackjack Multi-User Web App
 
-# ABOUT Black-Jack
+Simple multi-user BlackJack/21 web app built in [Node.js](https://nodejs.org) and [Angular](https://angularjs.org/).
 
-What is Blackjack?
-Blackjack is a gambling game that requires only a deck of cards. The goal of the game is to get as close as possible to a hand worth 21 points as the dealer flips over your cards – but go over and you're out!
+## Description 
 
-In Blackjack, numbered cards (2 through 10) are worth their face value, picture cards (jack, queen, and king) are worth 10, and an ace is worth either 1 or 11 depending on your other cards. To start a hand, players place their bets and are dealt two cards face up. They can choose to "hit" (receive another card) or "stick" (stay with their current hand) as they attempt to get as close as possible to 21. If they chose to hit and go over 21, they "bust" and lose the hand (and the money they bet!).
+* Allows up to 7 users to connect from different windows/browsers and play BlackJack against a dealer. If more than 7 users connect, they enter a queue and wait for a slot to be freed. In any other case, users entering a running game will be prompted to wait for the next round, in which they will immediately take part.
 
-Players face off against the dealer, who starts with one card face down and one face up. When all players have chosen to stick or have busted, the dealer then flips over their hidden card and either hits or sticks, their goal being to get a higher hand than any of the players.
+* All users share the same Deck and can see each other's moves/cards (except cards that are hidden - two cards per user are hidden and one card for the dealer). 
 
-If the dealer busts, they pay out the value of each player's wager to that player, provided that the player hasn't already busted. They also need to pay out if they don't get a higher hand than a player.
+* Users can `Hit` (take additional cards) or `Stick` (take a stand). Users take turns to play and have 10 seconds to act, which if passed, the respective user will be forced to *Stick* and the next player will take turn (a red 10-seconds countdown is shown next to the user's controls). 
 
-There are a lot of other rules (of course!) that  [you can read](https://bicyclecards.com/how-to-play/blackjack/) up on if you're interested, 
+* Dealer auto-plays last and determines losers/winners, while showing everyone their scores. The next game starts after a brief delay (approx. 10 secs - users are prompted accordingly).
+
+* If windows are left idle, connected users will auto-play given the timer (`Stick` on every round after the 10-seconds countdown). This is the expected behaviour, although may lead to a potential bug (see *known issues* below).
